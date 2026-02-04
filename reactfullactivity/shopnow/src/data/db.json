@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "name": "Women Kurti",
+    "price": 1199,
+    "category": "women",
+    "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2"
+  },
+  {
+    "id": 2,
+    "name": "Women Saree",
+    "price": 2999,
+    "category": "women",
+    "image": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6"
+  },
+  {
+    "id": 3,
+    "name": "Women Top",
+    "price": 899,
+    "category": "women",
+    "image": "https://images.unsplash.com/photo-1520975916090-3105956dac38"
+  },
+  {
+    "id": 4,
+    "name": "Women Jeans",
+    "price": 1499,
+    "category": "women",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+  },
+  {
+    "id": 5,
+    "name": "Women Dress",
+    "price": 1899,
+    "category": "women",
+    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+  },
+
+  {
+    "id": 6,
+    "name": "Men T-Shirt",
+    "price": 799,
+    "category": "men",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+  },
+  {
+    "id": 7,
+    "name": "Men Shirt",
+    "price": 1299,
+    "category": "men",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c"
+  },
+  {
+    "id": 8,
+    "name": "Men Jeans",
+    "price": 1599,
+    "category": "men",
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d"
+  },
+  {
+    "id": 9,
+    "name": "Men Jacket",
+    "price": 2499,
+    "category": "men",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f"
+  },
+  {
+    "id": 10,
+    "name": "Men Hoodie",
+    "price": 1799,
+    "category": "men",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+  },
+
+  {
+    "id": 11,
+    "name": "Kids T-Shirt",
+    "price": 599,
+    "category": "kids",
+    "image": "https://images.unsplash.com/photo-1600185365483-26d7b12c93a6"
+  },
+  {
+    "id": 12,
+    "name": "Kids Frock",
+    "price": 999,
+    "category": "kids",
+    "image": "https://images.unsplash.com/photo-1522770179533-24471fcdba45"
+  },
+  {
+    "id": 13,
+    "name": "Kids Shorts",
+    "price": 499,
+    "category": "kids",
+    "image": "https://images.unsplash.com/photo-1560464024-27dfaa77e4fb"
+  },
+  {
+    "id": 14,
+    "name": "Kids Jacket",
+    "price": 1299,
+    "category": "kids",
+    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136"
+  },
+  {
+    "id": 15,
+    "name": "Kids Ethnic Wear",
+    "price": 1599,
+    "category": "kids",
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf"
+  }
+]

@@ -1,0 +1,10 @@
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
+
+export default function ProtectedRoute({ children }) {
+  const { user } = useAuth();
+  if (!user || user.role !== "admin") {
+    return <Navigate to="/login" />;
+  }
+  return children;
+}

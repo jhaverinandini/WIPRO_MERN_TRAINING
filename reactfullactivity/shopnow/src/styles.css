@@ -1,0 +1,94 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px; /* ✅ THIS gives space between items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.products-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* ⭐ centers horizontally */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.products-header h2 {
+  margin-bottom: 10px;
+}
+
+.products-header input {
+  width: 250px;
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+}
+/* ⭐ ABOUT US PAGE */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-tag {
+  color: #ff6600;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.about-text h1 {
+  margin: 10px 0;
+}
+
+.about-text p {
+  color: #555;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about-stats h3 {
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 10px;
+}
