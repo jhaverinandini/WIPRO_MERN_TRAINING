@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* 🌈 VIBRANT BACKGROUND */
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+.inventory-card {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  width: 380px;
+  margin: 120px auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+
+  /* 🔵 THICK BLUE BORDER */
+  border: 5px solid #1e40af;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.inventory-card h1 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.count {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #1e40af;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 22px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 🟢 Add button */
+button.add {
+  background-color: #22c55e;
+  color: white;
+}
+
+/* 🔴 Remove button */
+button.remove {
+  background-color: #ef4444;
+  color: white;
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}

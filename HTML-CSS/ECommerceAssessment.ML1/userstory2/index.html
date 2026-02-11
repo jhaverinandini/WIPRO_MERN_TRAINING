@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🛍 Products</h1>
+
+  <div class="filters">
+    <button onclick="filterByCategory('electronics')">Electronics</button>
+    <button onclick="loadProducts()">All</button>
+  </div>
+
+  <p id="loading">Loading products...</p>
+  <div id="products" class="products-grid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

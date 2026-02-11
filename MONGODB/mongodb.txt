@@ -1,0 +1,101 @@
+$match : Filter
+$project  : to select / transform the fields
+$group    : Aggregate
+$sort : sorting
+$lookup : Joins
+-----------------------------------------------------------------------------------------------------------------------------
+
+db.employees.insertMany([
+  {
+    empId: 1,
+    name: "Amit",
+    dept: "IT",
+    experience: 4,
+    skills: ["Java", "Spring", "MongoDB"],
+    location: "Pune",
+    isActive: true
+  },
+  {
+    empId: 2,
+    name: "Riya",
+    dept: "HR",
+    experience: 2,
+    skills: ["Recruitment", "Communication"],
+    location: "Mumbai",
+    isActive: true
+  },
+  {
+    empId: 3,
+    name: "Arjun",
+    dept: "Finance",
+    experience: 6,
+    skills: ["Accounting", "Excel", "Tax"],
+    location: "Delhi",
+    isActive: true
+  },
+  {
+    empId: 4,
+    name: "Sneha",
+    dept: "IT",
+    experience: 3,
+    skills: ["Python", "Django", "SQL"],
+    location: "Bangalore",
+    isActive: false
+  },
+  {
+    empId: 5,
+    name: "Rahul",
+    dept: "Sales",
+    experience: 5,
+    skills: ["Marketing", "Negotiation"],
+    location: "Chennai",
+    isActive: true
+  },
+  {
+    empId: 6,
+    name: "Priya",
+    dept: "IT",
+    experience: 1,
+    skills: ["HTML", "CSS", "JavaScript"],
+    location: "Hyderabad",
+    isActive: true
+  },
+  {
+    empId: 7,
+    name: "Karan",
+    dept: "Support",
+    experience: 4,
+    skills: ["Customer Service", "CRM"],
+    location: "Pune",
+    isActive: false
+  },
+  {
+    empId: 8,
+    name: "Neha",
+    dept: "Marketing",
+    experience: 3,
+    skills: ["SEO", "Content Writing"],
+    location: "Kolkata",
+    isActive: true
+  },
+  {
+    empId: 9,
+    name: "Vikram",
+    dept: "IT",
+    experience: 7,
+    skills: ["NodeJS", "React", "MongoDB"],
+    location: "Bangalore",
+    isActive: true
+  },
+  {
+    empId: 10,
+    name: "Anjali",
+    dept: "Admin",
+    experience: 2,
+    skills: ["Management", "Documentation"],
+    location: "Jaipur",
+    isActive: true
+  }
+])
+
+----------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "authorInfo": "James Clear is a writer and speaker focused on habits, decision making, and continuous improvement.",
+      "bookInfo": "Atomic Habits explains how small daily habits can lead to remarkable results over time by focusing on systems rather than goals."
+    },
+    {
+      "id": 2,
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "authorInfo": "Robert Kiyosaki is an entrepreneur and financial educator known for teaching personal finance through storytelling.",
+      "bookInfo": "Rich Dad Poor Dad compares two approaches to money and highlights the importance of financial education and investing."
+    }
+  ]
+}

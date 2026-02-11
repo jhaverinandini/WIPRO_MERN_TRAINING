@@ -1,0 +1,34 @@
+/* RESET */
+body {
+  margin: 0;
+  background-color: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+
+/* FULL BLACK HEADER */
+.main-header {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+/* FULL BLACK FOOTER */
+.main-footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* EVENT CARDS */
+.custom-card {
+  background-color: #e3f2fd;
+  border: 3px solid #0d6efd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 10px;
+}
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product CRUD</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial; }
+    input { margin: 5px; }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+
+  <h3>Product Data in JSON</h3>
+
+  <input type="text" id="item" placeholder="Item Name">
+  <input type="number" id="price" placeholder="Price">
+  <input type="number" id="index" placeholder="Index">
+
+  <br>
+
+  <button id="add">Add</button>
+  <button id="update">Update</button>
+  <button id="delete">Delete</button>
+
+  <ul id="productlist"></ul>
+
+  <script>
+    const jsonData = `
+    [
+      {"item":"Laptop","price":60000},
+      {"item":"Mouse","price":1000},
+      {"item":"Keyboard","price":5000},
+      {"item":"Monitor","price":12000}
+    ]`;
+
+    let productData = JSON.parse(jsonData);
+
+  
+    function displayProducts() {
+      $("#productlist").empty();
+
+      productData.forEach((product, index) => {
+        $("#productlist").append(
+          `<li>${index} - ${product.item} : ₹${product.price}</li>`
+        );
+      });
+    }
+
+    displayProducts();
+
+    $("#add").click(function () {
+      const item = $("#item").val();
+      const price = $("#price").val();
+
+      if (item && price) {
+        productData.push({ item, price });
+        displayProducts();
+        alert("Product Added");
+      }
+    });
+
+   
+    $("#update").click(function () {
+      const index = $("#index").val();
+      const item = $("#item").val();
+      const price = $("#price").val();
+
+      if (productData[index]) {
+        productData[index].item = item;
+        productData[index].price = price;
+        displayProducts();
+        alert("Product Updated");
+      }
+    });
+
+   
+    $("#delete").click(function () {
+      const index = $("#index").val();
+
+      if (productData[index]) {
+        productData.splice(index, 1);
+        displayProducts();
+        alert("Product Deleted");
+      }
+    });
+  </script>
+
+</body>
+</html>

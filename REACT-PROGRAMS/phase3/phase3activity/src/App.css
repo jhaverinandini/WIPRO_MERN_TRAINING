@@ -1,0 +1,51 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.navbar {
+  background: #111;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.page {
+  padding: 40px;
+}
+
+.hero {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  height: 60vh;
+}
+
+.form input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+}
+
+.error {
+  color: red;
+}
+
+/* Animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: 300ms;
+}

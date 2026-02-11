@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Management</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FULL BLACK HEADER -->
+<header class="main-header">
+  <h1>Event Management</h1>
+  <p>Explore & Register for Events</p>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container my-5">
+
+  <!-- CAROUSEL -->
+  <div id="eventCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1200x350" class="d-block w-100" alt="Event">
+      </div>
+    </div>
+  </div>
+
+  <!-- EVENT CARDS -->
+  <section class="row text-center mb-5">
+    <div class="col-md-4">
+      <div class="card custom-card">
+        <h4>Music Fest</h4>
+        <p>Live concerts and fun</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card custom-card">
+        <h4>Tech Meetup</h4>
+        <p>Learn new technologies</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card custom-card">
+        <h4>Art Exhibition</h4>
+        <p>Creative artworks</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM -->
+  <section>
+    <h3 class="mb-3">Event Registration</h3>
+    <form>
+      <input type="text" class="form-control mb-3" placeholder="Name" required>
+      <input type="email" class="form-control mb-3" placeholder="Email" required>
+      <button class="btn btn-success px-4">Register</button>
+    </form>
+  </section>
+
+</main>
+
+<!-- FULL BLACK FOOTER -->
+<footer class="main-footer">
+  © 2026 Event Management
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

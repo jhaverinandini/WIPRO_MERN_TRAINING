@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.container-div {
+  background: #ffffff;
+  width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.container-div h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #000000;   /* BLACK */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Field */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+/* Label — BLACK */
+.field label {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* Input — WHITE box + BLACK text */
+.field input {
+  background: #ffffff;      /* WHITE BOX */
+  color: #000000;           /* BLACK TEXT */
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Placeholder — Grey */
+.field input::placeholder {
+  color: #666666;
+}
+
+/* Focus */
+.field input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 6px rgba(30, 60, 114, 0.4);
+}
+
+/* Error text */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3c72;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16325c;
+}

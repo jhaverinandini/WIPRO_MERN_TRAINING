@@ -1,0 +1,160 @@
+mysql> use ems;
+Database changed
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| company_db         |
+| emp                |
+| ems                |
+| hospital_db        |
+| information_schema |
+| mysql              |
+| performance_schema |
+| shop               |
+| sys                |
++--------------------+
+10 rows in set (0.26 sec)
+
+mysql> use sys;
+Database changed
+mysql> CREATE TABLE Patients (
+    ->     patient_id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     patient_name VARCHAR(100),
+    ->     patient_phone VARCHAR(15)
+    -> );
+Query OK, 0 rows affected (0.20 sec)
+
+mysql> INSERT INTO Patients (patient_name, patient_phone) VALUES
+    -> ('Ravi Kumar', '9876543210'),
+    -> ('Anita Sharma', '9123456780'),
+    -> ('Rahul Verma', '9988776655');
+Query OK, 3 rows affected (0.05 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Doctors (
+    ->     doctor_id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     specialization VARCHAR(100)
+    -> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> INSERT INTO Doctors (specialization) VALUES
+    -> ('Cardiology'),
+    -> ('Orthopedics'),
+    -> ('Dermatology');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Rooms (
+    ->     room_id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     room_no INT
+    -> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> INSERT INTO Rooms (room_no) VALUES
+    -> (101),
+    -> (202),
+    -> (303);
+Query OK, 3 rows affected (0.06 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Appointments (
+    ->     appointment_id INT PRIMARY KEY AUTO_INCREMENT,
+    ->     patient_id INT,
+    ->     doctor_id INT,
+    ->     room_id INT,
+    ->     appointment_date DATE,
+    ->
+    ->     FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),
+    ->     FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id),
+    ->     FOREIGN KEY (room_id) REFERENCES Rooms(room_id)
+    -> );
+Query OK, 0 rows affected (0.53 sec)
+
+mysql> INSERT INTO Appointments (patient_id, doctor_id, room_id, appointment_date) VALUES
+    -> (1, 1, 1, '2026-02-01'),
+    -> (2, 2, 2, '2026-02-03'),
+    -> (3, 3, 3, '2026-02-05');
+Query OK, 3 rows affected (0.08 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from Patients;
++------------+--------------+---------------+
+| patient_id | patient_name | patient_phone |
++------------+--------------+---------------+
+|          1 | Ravi Kumar   | 9876543210    |
+|          2 | Anita Sharma | 9123456780    |
+|          3 | Rahul Verma  | 9988776655    |
++------------+--------------+---------------+
+3 rows in set (0.05 sec)
+
+mysql> select * from doctors;
++-----------+----------------+
+| doctor_id | specialization |
++-----------+----------------+
+|         1 | Cardiology     |
+|         2 | Orthopedics    |
+|         3 | Dermatology    |
++-----------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from rooms;
++---------+---------+
+| room_id | room_no |
++---------+---------+
+|       1 |     101 |
+|       2 |     202 |
+|       3 |     303 |
++---------+---------+
+3 rows in set (0.01 sec)
+
+mysql> select * from Appointments;
++----------------+------------+-----------+---------+------------------+
+| appointment_id | patient_id | doctor_id | room_id | appointment_date |
++----------------+------------+-----------+---------+------------------+
+|              1 |          1 |         1 |       1 | 2026-02-01       |
+|              2 |          2 |         2 |       2 | 2026-02-03       |
+|              3 |          3 |         3 |       3 | 2026-02-05       |
++----------------+------------+-----------+---------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT
+    ->     a.appointment_id,
+    ->     p.patient_name,
+    ->     p.patient_phone,
+    ->     d.specialization,
+    ->     r.room_no,
+    ->     a.appointment_date
+    -> FROM Appointments a
+    -> JOIN Patients p ON a.patient_id = p.patient_id
+    -> JOIN Doctors d ON a.doctor_id = d.doctor_id
+    -> JOIN Rooms r ON a.room_id = r.room_id;
++----------------+--------------+---------------+----------------+---------+------------------+
+| appointment_id | patient_name | patient_phone | specialization | room_no | appointment_date |
++----------------+--------------+---------------+----------------+---------+------------------+
+|              1 | Ravi Kumar   | 9876543210    | Cardiology     |     101 | 2026-02-01       |
+|              2 | Anita Sharma | 9123456780    | Orthopedics    |     202 | 2026-02-03       |
+|              3 | Rahul Verma  | 9988776655    | Dermatology    |     303 | 2026-02-05       |
++----------------+--------------+---------------+----------------+---------+------------------+
+3 rows in set (0.17 sec)
+
+mysql> SELECT
+    ->     a.appointment_id,
+    ->     p.patient_name,
+    ->     p.patient_phone,
+    ->     d.specialization,
+    ->     r.room_no,
+    ->     a.appointment_date
+    -> FROM Appointments a
+    -> JOIN Patients p ON a.patient_id = p.patient_id
+    -> JOIN Doctors d ON a.doctor_id = d.doctor_id
+    -> JOIN Rooms r ON a.room_id = r.room_id;
++----------------+--------------+---------------+----------------+---------+------------------+
+| appointment_id | patient_name | patient_phone | specialization | room_no | appointment_date |
++----------------+--------------+---------------+----------------+---------+------------------+
+|              1 | Ravi Kumar   | 9876543210    | Cardiology     |     101 | 2026-02-01       |
+|              2 | Anita Sharma | 9123456780    | Orthopedics    |     202 | 2026-02-03       |
+|              3 | Rahul Verma  | 9988776655    | Dermatology    |     303 | 2026-02-05       |
++----------------+--------------+---------------+----------------+---------+------------------+
+3 rows in set (0.00 sec)

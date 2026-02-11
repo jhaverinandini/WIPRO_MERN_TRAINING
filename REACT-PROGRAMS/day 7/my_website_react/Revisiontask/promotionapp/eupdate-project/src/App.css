@@ -1,0 +1,63 @@
+/* Whole screen */
+.container {
+  min-height: 100vh;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Employee List text */
+h2 {
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Cards container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;          /* 🔥 IMPORTANT */
+  justify-content: center;  /* 🔥 CENTER */
+  gap: 20px;
+  max-width: 900px;         /* 🔥 CUT STOP */
+}
+
+/* Individual card */
+.card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Text black */
+.text-black {
+  color: black;
+}
+
+/* Button */
+button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Messages */
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.fail {
+  color: darkred;
+  font-weight: bold;
+  margin-top: 10px;
+}

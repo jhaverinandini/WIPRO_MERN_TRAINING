@@ -1,0 +1,12 @@
+{
+  "name": "skillsphere-lms-backend",
+  "version": "1.0.0",
+  "description": "Basic Routing & Route Middleware using Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

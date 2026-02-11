@@ -1,0 +1,123 @@
+/* 🌈 THEME VARIABLES */
+:root {
+  --primary: #4f46e5;      /* Indigo */
+  --secondary: #22c55e;    /* Green */
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+}
+
+/* 🌤️ PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: var(--text-dark);
+}
+
+/* 📦 APP CONTAINER */
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px;
+  background: transparent;
+}
+
+/* 🧭 NAVBAR */
+nav {
+  margin-bottom: 24px;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ✨ HEADINGS */
+h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+/* 📚 BOOK LIST */
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book-card {
+  background: var(--card-bg);
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.08);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(79, 70, 229, 0.18);
+}
+
+.book-card a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* 📘 BOOK DETAILS PAGE */
+.book-details {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.book-details h1 {
+  color: var(--primary);
+}
+
+.book-details h3 {
+  margin-top: 4px;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+}
+
+.book-details p {
+  line-height: 1.7;
+  font-size: 15.5px;
+  margin-bottom: 16px;
+}
+
+/* 🌀 FADE ANIMATION */
+.fade {
+  animation: fadeIn 0.45s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

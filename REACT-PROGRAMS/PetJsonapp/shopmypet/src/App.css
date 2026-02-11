@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background-color: pink;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav {
+  background: black;
+  padding: 15px;
+}
+
+nav a {
+  color: pink;
+  margin-right: 15px;
+}

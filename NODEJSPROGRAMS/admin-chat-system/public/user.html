@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Messages</title>
+</head>
+<body>
+  <h2>User Messages</h2>
+
+  <button onclick="loadMessages()">Load Messages</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    function loadMessages() {
+      fetch("/messages", {
+        headers: { role: "user" }
+      })
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById("list");
+          list.innerHTML = "";
+
+          data.forEach(m => {
+            // check if message has text or file
+            const hasText = m.text && m.text.trim() !== "";
+            const hasFile = m.file !== null && m.file !== undefined;
+
+            // skip empty messages
+            if (!hasText && !hasFile) return;
+
+            const li = document.createElement("li");
+
+            // show text if present
+            if (hasText) {
+              li.appendChild(document.createTextNode(m.text));
+            }
+
+            // show file link if present
+            if (hasFile) {
+              const link = document.createElement("a");
+              link.href = "/uploads/" + m.file;
+              link.textContent = hasText ? " (View File)" : "View File";
+              link.target = "_blank";
+              li.appendChild(link);
+            }
+
+            list.appendChild(li);
+          });
+        });
+    }
+  </script>
+</body>
+</html>

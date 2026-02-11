@@ -1,0 +1,11 @@
+{
+  "name": "node-basics-assignment",
+  "version": "1.0.0",
+  "description": "Node.js Basics Assignment",
+  "type": "module",
+  "scripts": {
+    "start": "node banner.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
