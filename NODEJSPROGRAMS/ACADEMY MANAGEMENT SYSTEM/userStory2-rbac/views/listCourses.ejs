@@ -1,0 +1,24 @@
+<h2>All Courses</h2>
+
+<ul>
+  <% courses.forEach(course => { %>
+    <li>
+      <%= course.title %> - ₹<%= course.fee %>
+    </li>
+  <% }) %>
+</ul>
+
+<br>
+
+<% if (currentPage > 1) { %>
+  <a href="/admin/courses?page=<%= currentPage - 1 %>">Previous</a>
+<% } %>
+
+Page <%= currentPage %> of <%= totalPages %>
+
+<% if (currentPage < totalPages) { %>
+  <a href="/admin/courses?page=<%= currentPage + 1 %>">Next</a>
+<% } %>
+
+<br><br>
+<a href="/admin/dashboard">Back to Dashboard</a>

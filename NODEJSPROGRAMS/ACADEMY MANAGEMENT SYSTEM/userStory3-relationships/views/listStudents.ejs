@@ -1,0 +1,23 @@
+<h2>All Students</h2>
+
+<ul>
+  <% students.forEach(student => { %>
+    <li>
+      <%= student.name %> - <%= student.email %>
+      - Phone: <%= student.Profile.phone %>
+      - Address: <%= student.Profile.address %>
+    </li>
+  <% }) %>
+</ul>
+
+<br>
+
+<% if (currentPage > 1) { %>
+  <a href="/students?page=<%= currentPage - 1 %>">Previous</a>
+<% } %>
+
+Page <%= currentPage %> of <%= totalPages %>
+
+<% if (currentPage < totalPages) { %>
+  <a href="/students?page=<%= currentPage + 1 %>">Next</a>
+<% } %>

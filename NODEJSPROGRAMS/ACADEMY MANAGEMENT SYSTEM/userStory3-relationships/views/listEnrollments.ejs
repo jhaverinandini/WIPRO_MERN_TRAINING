@@ -1,0 +1,21 @@
+<h2>All Enrollments</h2>
+
+<ul>
+  <% enrollments.forEach(enroll => { %>
+    <li>
+      <%= enroll.Student.name %> enrolled in <%= enroll.Course.title %>
+    </li>
+  <% }) %>
+</ul>
+
+<br>
+
+<% if (currentPage > 1) { %>
+  <a href="/enrollments?page=<%= currentPage - 1 %>">Previous</a>
+<% } %>
+
+Page <%= currentPage %> of <%= totalPages %>
+
+<% if (currentPage < totalPages) { %>
+  <a href="/enrollments?page=<%= currentPage + 1 %>">Next</a>
+<% } %>

@@ -1,0 +1,26 @@
+<h2>Create Course</h2>
+
+<form action="/admin/create-course" method="POST">
+
+  Course Title:<br>
+  <input type="text" name="title" required><br><br>
+
+  Fee:<br>
+  <input type="number" name="fee" required><br><br>
+
+  Instructor:<br>
+  <select name="instructorId">
+    <% instructors.forEach(inst => { %>
+      <option value="<%= inst.id %>">
+        <%= inst.username %>
+      </option>
+    <% }) %>
+  </select>
+  <br><br>
+
+  <button type="submit">Create Course</button>
+
+</form>
+
+<br>
+<a href="/admin/dashboard">Back to Dashboard</a>
