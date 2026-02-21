@@ -1,0 +1,68 @@
+/* Background Gradient */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+}
+
+/* Center container */
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 40px;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Inputs */
+.form-control {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* Button Glow */
+.btn-primary {
+  background: linear-gradient(90deg, #bfce16, #e52e71);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+body {
+  margin: 0;
+  background: #0f0c29;
+}

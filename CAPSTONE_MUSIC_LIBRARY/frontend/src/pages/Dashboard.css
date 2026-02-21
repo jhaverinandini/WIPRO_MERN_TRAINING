@@ -1,0 +1,268 @@
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #0f0f0f, #000);
+  color: white;
+}
+
+.container {
+  padding: 30px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  margin-top: 40px;
+}
+
+
+
+.title {
+  text-align: center;
+  color: #1db954;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1e1e1e;
+  color: white;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.input:focus {
+  box-shadow: 0 0 8px #1db954;
+}
+
+.green-btn,
+.red-btn {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.green-btn {
+  background: #1db954;
+}
+
+.green-btn:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+}
+
+.red-btn {
+  background: #e50914;
+}
+
+.red-btn:hover {
+  background: #ff2e2e;
+  transform: scale(1.05);
+}
+
+
+
+.playlist-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.playlist-btn {
+  background: #181818;
+  color: white;
+  border: 1px solid #282828;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.playlist-btn:hover {
+  background: #1db954;
+}
+
+
+.details-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(to right, #1db95430, #181818);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.details-cover {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.details-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;             
+}
+
+.details-card p {
+  color: #e5e5e5;           
+  margin: 5px 0;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #1db954;
+  color: #1db954;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.back-btn:hover {
+  background: #1db954;
+  color: white;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+
+
+.card {
+  background: #181818;
+  padding: 18px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  color: white;               
+}
+
+.card h3 {
+  color: white;               
+}
+
+.card p {
+  color: #cccccc;             
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #222;
+}
+
+
+.cover {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.cover:hover {
+  transform: scale(1.05);
+}
+
+
+
+.player {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.controls button {
+  background: #1db954;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #1ed760;
+  transform: scale(1.1);
+}
+
+
+
+.dropdown {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+/* NOTIFICATION */
+
+.notification {
+  background: #1db954;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: slideIn 0.4s ease;
+  color: white;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .details-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details-cover {
+    width: 200px;
+    height: 200px;
+  }
+}

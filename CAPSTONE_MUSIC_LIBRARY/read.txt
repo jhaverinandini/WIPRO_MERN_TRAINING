@@ -1,0 +1,24 @@
+Nandhu’s Music World is a fully developed Full Stack MERN (MongoDB, Express.js, React.js, Node.js)
+ Music Library application built as a complete capstone project implementing all the requirements specified in the problem statement. 
+ This application supports two roles – Admin and User – with secure JWT-based authentication and proper role-based access control.
+Users can register, login, logout, browse songs, view detailed information (song name, singer, music director, album, release date), 
+search songs using multiple filters, create multiple playlists, perform full CRUD operations on playlists and playlist songs,
+and access advanced music controls like play, stop, shuffle, and repeat. Admins have complete control over the music library,
+ including CRUD operations on songs, visibility restriction for users, and real-time notification functionality when new songs are added.
+The application follows a proper layered architecture with database schema design, controller-service structure, RESTful APIs,
+and frontend-backend integration. MongoDB is used for data storage with well-structured collections and relationships.
+The frontend is designed as a responsive Single Page Application (SPA) using React Router for seamless navigation without page reloads.
+JWT tokens are stored securely in local storage for session handling. Client-side form validations are implemented to ensure data integrity 
+and enhance user experience.
+Search functionality, playlist management, notification service, and song visibility restriction are completely implemented as per Sprint II 
+and Sprint III objectives.
+Proper component structure and maintainable code practices are followed across the application
+Unit testing and end-to-end testing have been implemented using Mocha, Chai, and Supertest to validate backend APIs and 
+ensure system reliability from te user's perspective. The application is fully responsive, user-friendly, and production-ready. 
+ All features mentioned in the capstone problem statement have been successfully implemented and integrated into this project.
+
+
+
+Note:in screenshots of output .. some song cover page is blank because they are came because when i implemented end to end testing they were added..
+i have implemented all the instructions give All the sprints and all the part are covered.all the notificationadded.. performed crud..
+performed every detail without missing..
